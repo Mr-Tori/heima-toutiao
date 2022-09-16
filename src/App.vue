@@ -1,28 +1,33 @@
 <template>
-  <div id="app">
-    <img alt="Vue logo" src="./assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
+  <!-- 只能有一个根标签 -->
+  <div>
+    <Channel></Channel>
+    <NewList></NewList>
   </div>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
-
+import Channel from '@/components/channel.vue'
+import NewList from '@/components/new-list.vue'
 export default {
+  // 组件的名字，用大写开头
   name: 'App',
+  // 选项是API，不同的功能有特定的选项位置
+  data () {
+    return {}
+  },
+  created () {},
+  mounted () {},
   components: {
-    HelloWorld
-  }
+    Channel,
+    NewList
+  },
+  props: {},
+  computed: {},
+  watch: {},
+  methods: {}
 }
 </script>
 
-<style>
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
-}
+<style scoped>
 </style>
